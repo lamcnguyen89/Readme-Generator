@@ -33,25 +33,36 @@
                     // Usage Information
                     type: "input",
                     name: "usage",
-                    message:
+                    message: "Provide instructions and examples for use. Include screenshots if necessary."
                 },
                 {
                     // Contribution Guidelines
+                    // I will have to read the Contributor Covenant: https://www.contributor-covenant.org to make different questions
                     type: "input",
                     name: "contribution" ,
-                    message:
+                    message: "If you want other developers to contribute to your application, add guidelines on how to do this"
                 },
                 {
                     // Test Instructions
                     type: "input",
                     name: "test" ,
-                    message:
+                    message: "Go the extra mile if you want and write tests for your application. Then provide examples of how to run them."
                 },
                 {
                     // Choose License from list of licenses.
                     type: "list",
                     name: "license",
-                    message: "From the list below, choose the type of license you want for your application."
+                    message: "From the list below, choose the type of license you want for your application. To get help deciding on a license visit: http://www.choosealicense.com",
+                    choices: [
+                        "MIT License (Default open source license)",
+                        "GNU GPLv3",
+                        "GNU AGPLv3",
+                        "GNU LGPLv3",
+                        "Mozilla Public License 2.0",
+                        "Apache License 2.0",
+                        "Boost Software License 1.0",
+                        "The Unlicense"
+                    ]
                 },
                 {
                     // Ask the user his github username.
