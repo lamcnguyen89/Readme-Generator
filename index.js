@@ -60,7 +60,7 @@
                         name: "license",
                         message: "From the list below, choose the type of license you want for your application. To get help deciding on a license visit: http://www.choosealicense.com",
                         choices: [
-                            "MIT License (Default open source license)",
+                            "MIT License",
                             "GNU GPLv3",
                             "GNU AGPLv3",
                             "GNU LGPLv3",
@@ -89,7 +89,45 @@
 
         function licensing(answers) {
 
+            // We create an an object with license description and badge data. Based off user prompt answers, we will destructure the object accordingly and return that value.
 
+            let licenseArray = [];
+            
+            if (answers.license == "MIT License"){
+                licenseArray.push(
+                    
+                );
+            } else if (answers.license == "GNU GPLv3") {
+                licenseArray.push(
+
+                );
+            } else if (answers.license == "GNU AGPLv3") {
+                licenseArray.push(
+
+                );
+            } else if (answers.license == "GNU LGPLv3") {
+                licenseArray.push(
+
+                );
+            } else if (answers.license == "Mozilla Public License 2.0") {
+                licenseArray.push(
+
+                );
+            } else if (answers.license == "Apache License 2.0") {
+                licenseArray.push(
+
+                );
+            } else if (answers.license == "Boost Software License 1.0") {
+                licenseArray.push(
+
+                );
+            } else {
+                licenseArray.push(
+
+                );
+            }
+
+            return licenseArray;
 
         }
 
