@@ -89,6 +89,8 @@
 
         function licensing(answers) {
 
+
+
         }
 
 // Function to generate Markdown file for Readme. Use template literals:
@@ -105,6 +107,15 @@ function generateMarkdown(answers) {
         return `
 
         # ${answers.title}
+
+        #### Table of Contents
+        [Description](## Description)
+        [Installation](## Installation)
+        [Usage](## Usage)
+        [License](## License)
+        [Contributing](## Contributing)
+        [Tests](## Tests)
+        [Questions](## Questions)
 
         ## Description
 
