@@ -151,19 +151,18 @@
 function generateMarkdown(answers) {
 
         return `
-
 # ${answers.title}
 
 [![License: ${licenseArray[0]}](${licenseArray[1]})](${licenseArray[2]})
 
 #### Table of Contents
-[Description](## Description)
-[Installation](## Installation)
-[Usage](## Usage)
-[License](## License)
-[Contributing](## Contributing)
-[Tests](## Tests)
-[Questions](## Questions)
+* [Description](##Description)
+* [Installation](##Installation)
+* [Usage](##Usage)
+* [License](##License)
+* [Contributing](##Contributing)
+* [Tests](##Tests)
+* [Questions](##Questions)
 
 ## Description
 
@@ -191,7 +190,7 @@ ${answers.test}
 
 ## Questions
 
-For questions, email me at: ${answers.email}
+For questions, email me at: ${answers.email} <br />
 Or visit my Github [here](https://github.com/${answers.github})
 
         `
