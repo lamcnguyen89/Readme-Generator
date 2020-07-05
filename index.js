@@ -60,14 +60,14 @@
                         name: "license",
                         message: "From the list below, choose the type of license you want for your application. To get help deciding on a license visit: http://www.choosealicense.com",
                         choices: [
-                            "MIT License",
-                            "GNU GPLv3",
-                            "GNU AGPLv3",
-                            "GNU LGPLv3",
-                            "Mozilla Public License 2.0",
-                            "Apache License 2.0",
-                            "Boost Software License 1.0",
-                            "The Unlicense"
+                            "MIT",
+                            "GPL v3",
+                            "AGPL v3",
+                            "LGPL v3",
+                            "MPL 2.0",
+                            "Apache 2.0",
+                            "Boost 1.0",
+                            "Unlicense"
                         ]
                     },
                     {
@@ -93,38 +93,54 @@
 
             let licenseArray = [];
             
-            if (answers.license == "MIT License"){
-                licenseArray.push(
-                    
-                );
-            } else if (answers.license == "GNU GPLv3") {
-                licenseArray.push(
-
-                );
-            } else if (answers.license == "GNU AGPLv3") {
-                licenseArray.push(
-
-                );
-            } else if (answers.license == "GNU LGPLv3") {
-                licenseArray.push(
-
-                );
-            } else if (answers.license == "Mozilla Public License 2.0") {
-                licenseArray.push(
-
-                );
-            } else if (answers.license == "Apache License 2.0") {
-                licenseArray.push(
-
-                );
-            } else if (answers.license == "Boost Software License 1.0") {
-                licenseArray.push(
-
-                );
+            if (answers.license == "MIT"){
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-MIT-yellow.svg");
+                const licenseURL2 = new URL("https://opensource.org/licenses/MIT"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "GPL v3") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-GPLv3-blue.svg");
+                const licenseURL2 = new URL("https://www.gnu.org/licenses/gpl-3.0"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "AGPL v3") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-AGPL%20v3-blue.svg");
+                const licenseURL2 = new URL("https://www.gnu.org/licenses/agpl-3.0"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "LGPL v3") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-LGPL%20v3-blue.svg");
+                const licenseURL2 = new URL("https://www.gnu.org/licenses/lgpl-3.0"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "MPL 2.0") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg");
+                const licenseURL2 = new URL("https://opensource.org/licenses/MPL-2.0"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "Apache 2.0") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-Apache%202.0-blue.svg");
+                const licenseURL2 = new URL("https://opensource.org/licenses/Apache-2.0"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
+            } else if (answers.license == "Boost 1.0") {
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/License-Boost%201.0-lightblue.svg");
+                const licenseURL2 = new URL("https://www.boost.org/LICENSE_1_0.txt"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText); 
             } else {
-                licenseArray.push(
-
-                );
+                const licenseTag = answers.license;
+                const licenseURL1 = new URL("https://img.shields.io/badge/license-Unlicense-blue.svg");
+                const licenseURL2 = new URL("http://unlicense.org/"); 
+                const licenseText = "";
+                licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText); 
             }
 
             return licenseArray;
@@ -145,6 +161,8 @@ function generateMarkdown(answers) {
         return `
 
         # ${answers.title}
+
+        [![License: ${licenseArray[0]}](${licenseArray[1]})](${licenseArray[2]})
 
         #### Table of Contents
         [Description](## Description)
@@ -169,7 +187,7 @@ function generateMarkdown(answers) {
 
         ## License
 
-        ${}
+        ${licenseArray[3]}
 
         ## Contributing
 
@@ -183,8 +201,7 @@ function generateMarkdown(answers) {
 
         For questions, email me at: ${answers.email}
         Or visit my Github
-        
-        
+
         `
 
 };
@@ -193,6 +210,8 @@ function generateMarkdown(answers) {
 async function init() {
     try {
         const answers = await promptUser()
+
+        licensing(answers);
 
         const mdfile = generateMarkdown(answers);
 
