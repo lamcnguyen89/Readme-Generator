@@ -12,7 +12,7 @@
         // For writing generated data to a file
         const writeFileAsync = util.promisify(fs.writeFile);
 
-        // We create an an object with license description and badge data. Based off user prompt answers, we will push certain values to the array that can be used to write the readme.
+        // We create an an empty object for the license description and badge data. Based off user prompt answers, we will push certain values to the array that can be used to write the readme.
         let licenseArray = [];
 
 // Function to ask the user questions, then based off responses, generate the README.md file by running various functions.
@@ -149,13 +149,6 @@
 // Function to generate Markdown file for Readme. Use template literals:
 
 function generateMarkdown(answers) {
-        // Display Title of the Readme:
-        // Display sections of the Readme entitled Description, Installation, Usage, Contributing and Tests:
-        // Display a badge for the license that is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under:
-        // Add Github user name with a link to Github profile under the section titled Questions:
-        // Generate 1 badge specific to the repository
-        // Add user's email address to the section titled Questions, with instructions on how to reach for additional questions:
-        // Generate Table of Contents. When user clicks on lnks in the TOC, user is taken to corresponding section of the README
 
         return `
 
@@ -199,7 +192,7 @@ ${answers.test}
 ## Questions
 
 For questions, email me at: ${answers.email}
-Or visit my Github
+Or visit my Github [here](https://github.com/${answers.github})
 
         `
 
