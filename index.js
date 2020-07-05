@@ -88,7 +88,7 @@
             ]);
         }
 
-// Function to show Licensing:
+// Function to show Licensing badge and to display text under the Licensing section of the Readme::
 
         function licensing(answers) {
 
@@ -146,7 +146,7 @@
 
         }
 
-// Function to generate Markdown file for Readme. Use template literals:
+// Function to generate Markdown file for Readme. Used template literals and pulled data from the object created by the promptUser function and the licensing function:
 
 function generateMarkdown(answers) {
 
@@ -194,7 +194,6 @@ For questions, email me at: ${answers.email} <br />
 Or visit my Github [here](https://github.com/${answers.github})
 
         `
-
 };
 
 // function to initialize program
@@ -203,7 +202,6 @@ async function init() {
         const answers = await promptUser();
 
         licensing(answers);
-        console.log(licenseArray);
 
         const mdfile = generateMarkdown(answers);
 
