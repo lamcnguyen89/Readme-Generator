@@ -97,49 +97,49 @@
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-MIT-yellow.svg");
                 const licenseURL2 = new URL("https://opensource.org/licenses/MIT"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the MIT License. To read more about the conditions of this license, visit: https://opensource.org/licenses/MIT"
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "GPL v3") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-GPLv3-blue.svg");
                 const licenseURL2 = new URL("https://www.gnu.org/licenses/gpl-3.0"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the GNU General Public License. To read more about the conditions of this license, visit: https://www.gnu.org/licenses/gpl-3.0 ";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "AGPL v3") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-AGPL%20v3-blue.svg");
                 const licenseURL2 = new URL("https://www.gnu.org/licenses/agpl-3.0"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the GNU Affero General Public License. To read more about the conditions of this license, visit: https://www.gnu.org/licenses/agpl-3.0 ";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "LGPL v3") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-LGPL%20v3-blue.svg");
                 const licenseURL2 = new URL("https://www.gnu.org/licenses/lgpl-3.0"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the GNU Lesser General Public License. To read more about the conditions of this license, visit: https://www.gnu.org/licenses/lgpl-3.0";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "MPL 2.0") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg");
                 const licenseURL2 = new URL("https://opensource.org/licenses/MPL-2.0"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the Mozilla Public License 2.0. To read more about the conditions of this license, visit: https://opensource.org/licenses/MPL-2.0";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "Apache 2.0") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-Apache%202.0-blue.svg");
                 const licenseURL2 = new URL("https://opensource.org/licenses/Apache-2.0"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the Apache License 2.0. To read more about the conditions of this license, visit: https://opensource.org/licenses/Apache-2.0  ";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText);
             } else if (answers.license == "Boost 1.0") {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/License-Boost%201.0-lightblue.svg");
                 const licenseURL2 = new URL("https://www.boost.org/LICENSE_1_0.txt"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the Boost Software License. To read more about the conditions of this license, visit: https://www.boost.org/LICENSE_1_0.txt";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText); 
             } else {
                 const licenseTag = answers.license;
                 const licenseURL1 = new URL("https://img.shields.io/badge/license-Unlicense-blue.svg");
                 const licenseURL2 = new URL("http://unlicense.org/"); 
-                const licenseText = "";
+                const licenseText = "This application is licensed under the Unlicense. To read more about the conditions of this license, visit: https://unlicense.org/";
                 licenseArray.push(licenseTag,licenseURL1, licenseURL2, licenseText); 
             }
 
