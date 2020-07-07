@@ -1,7 +1,7 @@
 
-# asdadf
+# Readme-Generator
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 #### Table of Contents
 * [Description](##Description)
@@ -14,28 +14,30 @@
 
 ## Description
 
-sdfdsfsdfs
+of this exercise is to learn the usage of Node.JS and its various modules. <br />Also we will learn to use Asynchronous commands as well as template literals.
 
 ## Installation
 
-cvcxvcxv
+Node.js <br />Visual Studio Code <br />Web Browser
 
 ## Usage 
 
-sdvsef
+Open Git Bash command line within the application folder. Type: "node index.js" and then follow the prompts.
+![](Screenshot01.PNG)  <br />
+<hr>
+![](Screenshot01.PNG)
 
 ## License
 
-This application is licensed under the Unlicense. <br /> 
-To read more about the conditions of this license, visit: https://unlicense.org/
+This application is licensed under the Apache License 2.0. <br /> To read more about the conditions of this license, visit: https://opensource.org/licenses/Apache-2.0  
 
 ## Contributing
 
-ksadsa
+To contribute, send me an email which is shown in the Questions Section Below. <br /> Or visit my Github and contact me there.
 
 ## Tests
 
-asccaaca
+To test, just run the application.
 
 ## Questions
 

@@ -12,7 +12,9 @@
         // For writing generated data to a file
         const writeFileAsync = util.promisify(fs.writeFile);
 
-        // We create an an empty object for the license description and badge data. Based off user prompt answers, we will push certain values to the array that can be used to write the readme.
+        // We create an an empty object for the license description and badge data. 
+        // Based off user prompt answers, we will push certain values to the array.
+        // That array can then be used as input into the generateMarkdown function to write the readme.
         let licenseArray = [];
 
 // Function to ask the user questions, then based off responses, generate the README.md file by running various functions.
@@ -30,7 +32,7 @@
                         // Description of the project
                         type: "input",
                         name: "description",
-                        message: "Enter a description for your project. A hint would be to write it in a text editor and copy that text into this input."
+                        message: "Enter a description for your project."
                     },
                     {
                         // Installation Instructions
@@ -44,6 +46,18 @@
                         name: "usage",
                         message: "Provide instructions and examples for use. Include screenshots if necessary."
                     },
+                    {
+                        // Add a Screenshot 1/2
+                        type: "input",
+                        name: "screenshot1",
+                        message: "Enter the filepath or url for your first of two maximum screenshots/gifs."
+                    },
+                    {
+                        // Add a second screenshot 2/2
+                        type: "input",
+                        name: "screenshot2",
+                        message: "Enter filepath or url for your second of two allowed screenshots/gifs."
+                    }, 
                     {
                         // Contribution Guidelines
                         // I will have to read the Contributor Covenant: https://www.contributor-covenant.org to make different questions
@@ -61,7 +75,7 @@
                         // Choose License from list of licenses.
                         type: "list",
                         name: "license",
-                        message: "From the list below, choose the type of license you want for your application. To get help deciding on a license visit: http://www.choosealicense.com",
+                        message: "From the list below, choose the your license. For license info, visit: http://www.choosealicense.com",
                         choices: [
                             "MIT",
                             "GPL v3",
@@ -88,7 +102,8 @@
             ]);
         }
 
-// Function to show Licensing badge and to display text under the Licensing section of the Readme::
+// Function to show Licensing badge and to display text under the Licensing section of the Readme:
+// The source used was this website: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
         function licensing(answers) {
 
@@ -146,7 +161,8 @@
 
         }
 
-// Function to generate Markdown file for Readme. Used template literals and pulled data from the object created by the promptUser function and the licensing function:
+// Function to generate Markdown file for Readme. 
+// Used template literals and pulled data from the object created by the promptUser function and the licensing function:
 
 function generateMarkdown(answers) {
 
@@ -175,6 +191,8 @@ ${answers.installation}
 ## Usage 
 
 ${answers.usage}
+![](${answers.screenshot1})  <br />
+![](${answers.screenshot2})
 
 ## License
 
