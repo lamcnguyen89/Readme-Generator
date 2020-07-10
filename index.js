@@ -47,18 +47,6 @@
                         message: "Provide instructions and examples for use. Include screenshots if necessary."
                     },
                     {
-                        // Add a Screenshot 1/2
-                        type: "input",
-                        name: "screenshot1",
-                        message: "Enter the filepath or url for your first of two maximum screenshots/gifs."
-                    },
-                    {
-                        // Add a second screenshot 2/2
-                        type: "input",
-                        name: "screenshot2",
-                        message: "Enter filepath or url for your second of two allowed screenshots/gifs."
-                    }, 
-                    {
                         // Contribution Guidelines
                         // I will have to read the Contributor Covenant: https://www.contributor-covenant.org to make different questions
                         type: "input",
@@ -191,8 +179,7 @@ ${answers.installation}
 ## Usage 
 
 ${answers.usage}
-![](${answers.screenshot1})  <br />
-![](${answers.screenshot2})
+
 
 ## License
 
